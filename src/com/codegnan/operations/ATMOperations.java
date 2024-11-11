@@ -123,7 +123,7 @@ public class ATMOperations {
 		}
 	}
 
-	// operations avilable on operator mode
+	// operations available on operator mode
 	public static void operatorMode(IATMService card) {
 		Scanner scanner = new Scanner(System.in);
 		double amount;
@@ -216,7 +216,7 @@ public class ATMOperations {
 					System.out.println("card validation failed");
 					continue;
 				}
-				ACTIVITY.add("ACCESSED by : " + card.getUserName()+" status: Access approved");
+				ACTIVITY.add("ACCESSED by : " + card.getUserName()+" Status: Access approved");
 				if(card.getUserType().equals("operator")) {
 					operatorMode(card);
 					continue;
@@ -243,7 +243,7 @@ public class ATMOperations {
 							ACTIVITY.add("ACCESSED by : " + card.getUserName()+" Activity : amount withdraw" +withdrawAmount+"from machine");
 							break;
 						case 2:
-							System.out.println("Please enter the amount to deposite");
+							System.out.println("Please enter the amount to deposit");
 							depositeAmount = scanner.nextDouble();
 							validateDepositeAmount(depositeAmount);
 							ATM_MACHINE_BALANCE +=depositeAmount;
